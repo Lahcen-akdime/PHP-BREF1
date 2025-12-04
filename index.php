@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Space</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+           <div class="logopic"></div>
+            <span>LIBRARY SPACE</span>
+        </div>
+        <nav class="nav-bar">
+            <a href="#index.php" class="nav-item active">ACCUEIL</a>
+            <a href="affichage.php" class="nav-item">COURS</a>
+            <a href="geree.php" class="nav-item conditions">CONDITIONS</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="top-books-section">
+            <h3 class="section-title">TOP 10 BOOK</h3>
+            <div class="carousel-container">
+                <div class="top-book-list">
+                    <div class="book-card">
+                        <img src="ressourses/large_ce5d4ed6f53d69535c1893a3e14cb41e.jpg" alt="To Sleep in a Sea of Stars" class="book-cover">
+                    </div>
+                    <div class="book-card">
+                        <img src="ressourses/81zXbQP-pWL._SY522_.jpg" alt="Where Good Ideas Come From" class="book-cover">
+                    </div>
+                    <div class="book-card">
+                        <img src="ressourses/61DGTA9gSaL.jpg" alt="Where Good Ideas Come From" class="book-cover">
+                    </div>
+                    <div class="book-card">
+                        <img src="ressourses/OIP (1).webp" alt="The Sum of All Things" class="book-cover">
+                    </div>
+                    <div class="book-card">
+                        <img src="ressourses/OIP.webp" alt="The Water Dancer" class="book-cover">
+                    </div>
+                    <div class="book-card">
+                        <img src="ressourses/sub-buzz-1228-1576780705-9.jpg" alt="Late Migrations" class="book-cover">
+                    </div>
+
+                    <div class="book-card">
+                        <img src="ressourses/large_ce5d4ed6f53d69535c1893a3e14cb41e.jpg" alt="To Sleep in a Sea of Stars" class="book-cover">
+                    </div>
+                    <div class="book-card">
+                        <img src="ressourses/61DGTA9gSaL.jpg" alt="Where Good Ideas Come From" class="book-cover">
+                    </div>
+                    <div class="book-card">
+                        <img src="ressourses/81zXbQP-pWL._SY522_.jpg" alt="Where Good Ideas Come From" class="book-cover">
+                    </div>
+                    <div class="book-card">
+                        <img src="ressourses/OIP (1).webp" alt="The Sum of All Things" class="book-cover">
+                    </div>
+                    <div class="book-card">
+                        <img src="ressourses/OIP.webp" alt="The Water Dancer" class="book-cover">
+                    </div>
+                    <div class="book-card">
+                        <img src="ressourses/sub-buzz-1228-1576780705-9.jpg" alt="Late Migrations" class="book-cover">
+                    </div>
+                    <div class="book-card">
+                        <img src="ressourses/OIP (2).webp" alt="Late Migrations" class="book-cover">
+                    </div>
+                    <div class="book-card">
+                        <img src="ressourses/wnObjHpM-scaled.jpeg" alt="Late Migrations" class="book-cover">
+                    </div>
+                    <div class="book-card">
+                        <img src="ressourses/canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg" alt="Late Migrations" class="book-cover">
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <h3 class="section-title my-book-title">MY BOOK</h3>
+        
+        <section class="my-book-section">
+            <a href="affichage.php">
+            <div class="course-card">
+                <div class="card-icon">
+                    </div>
+                <h4>AFFICHER LES COURS ET LEURS SECTIONS</h4>
+                <ul>
+                    <li>LIRE</li>
+                    <li>EXPORTER</li>
+                </ul>
+            </div>
+            </a>
+            <div class="course-card">
+                <a href="geree.php">
+                <div class="card-icon">
+                    </div>
+                <h4>GEREE LES COURS</h4>
+                <ul>
+                    <li>AJOUTER</li>
+                    <li>MODIFIER</li>
+                    <li>SUPPRIMER</li>
+                </ul>
+            </div>
+            </a>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

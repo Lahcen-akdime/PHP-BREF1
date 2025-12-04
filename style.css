@@ -1,0 +1,210 @@
+:root {
+    --color-primary: #f8c962; /* Yellow/Orange background */
+    --color-teal: #36b6b7;
+    --color-red: #e9615a;
+    --color-gold: #fbc751;
+    --color-text-dark: #333;
+    --color-text-light: #fff;
+    --book-width: 150px;
+    --book-gap: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--color-text-light);
+    color: var(--color-text-dark);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: var(--color-text-light);
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-bar {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-item {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--color-text-light);
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-bar .active {
+    background-color: var(--color-teal);
+}
+
+.nav-item:nth-child(2) {
+    background-color: var(--color-red);
+}
+
+.nav-item.conditions {
+    background-color: var(--color-gold);
+}
+
+/* --- Main Content and Yellow Background --- */
+
+.container {
+    background-color: var(--color-primary);
+    padding: 30px 50px;
+}
+
+/* --- Book Carousel Section --- */
+.top-books-section {
+    padding-bottom: 20px;
+    overflow: hidden; /* Important: Hides the duplicated books initially */
+}
+
+.section-title {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.top-book-list {
+    display: flex;
+    /* Calculate the total width of one set of books for the animation */
+    /* (6 books * 150px width) + (5 gaps * 20px gap) = 900px + 100px = 1000px */
+    width: 200%; /* Setting a high width to hold the duplicated content */
+    animation: scroll-left 30s linear infinite; /* Animation applied here */
+    will-change: transform; /* Performance optimization */
+}
+
+.book-card {
+    min-width: var(--book-width); /* Ensure card maintains size */
+    height: 250px;
+    margin-right: var(--book-gap);
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.book-card:hover {
+    transform: scale(1.05);
+}
+
+.book-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the card without distortion */
+    display: block;
+}
+
+/* --- Keyframe Animation for Continuous Scroll --- */
+/* The animation moves the *entire* list to the left by the width of *one* set of books. 
+   Since the list is duplicated, this creates a seamless loop. */
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        /* Move left by the width of one set of 6 books + 6 gaps (5 between books + 1 after the last book) */
+        /* (6 * 150px) + (6 * 20px) = 900px + 120px = 1020px */
+        transform: translateX(calc(-6 * (var(--book-width) + var(--book-gap)))); 
+    }
+}
+
+
+/* --- My Book Section --- */
+
+.my-book-title {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.my-book-section {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.course-card {
+    background-color: var(--color-text-light);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: all 1s;
+}
+.course-card:hover{
+transform: scale(2rem);
+box-shadow: 0 0 15px black;
+}
+
+.course-card h4 {
+    color: var(--color-text-dark);
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.course-card ul {
+    list-style: none;
+    padding-top: 10px;
+}
+
+.course-card li {
+    padding: 5px 0;
+    color: #666;
+}
+/* Styling the placeholder icons to match the screenshot */
+.card-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background-color: #f0f0f0; /* Light gray background for placeholder */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* You would typically use background-image here with your resources. */
+    /* For this example, I'll use a visual placeholder based on the image: */
+}
+/* Specific styles for the two cards based on your image */
+.logopic{
+height: 4rem;
+width: 4rem;
+background: url(ressourses/borrow-books.png);
+background-size: cover;
+}
+.my-book-section .course-card:nth-child(1) .card-icon {
+    background-image: url('ressourses/R (1).jpg');
+    background-size: cover;
+    background-position: center;
+}
+.my-book-section .course-card:nth-child(2) .card-icon {
+    background-image: url('ressourses/R.jpg');
+    background-size: cover;
+    background-position: center;
+}

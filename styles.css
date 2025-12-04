@@ -1,0 +1,133 @@
+/* GLOBAL */
+:root {
+    --color-primary: #f8c962; /* Yellow/Orange background */
+    --color-teal: #36b6b7;
+    --color-red: #e9615a;
+    --color-gold: #fbc751;
+    --color-text-dark: #333;
+    --color-text-light: #fff;
+    --book-width: 150px;
+    --book-gap: 20px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+      background-color: var(--color-primary);
+    color: var(--color-text-dark);
+}
+
+/* HEADER */
+.header {
+    background: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    margin: 20px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+   height: 4rem;
+width: 4rem;
+background: url(ressourses/borrow-books.png);
+background-size: cover;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+.header-nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-btn {
+    padding: 12px 35px;
+    color: white;
+    font-weight: 600;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* SAME COLORS AS YOUR UI */
+.green  { background: #35C1A8; }
+.red    { background: #E1655E; }
+.yellow { background: #E8C255; }
+
+/* PAGE CONTENT */
+.content {
+    margin: 40px;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+/* LISTE DES COURS */
+.course-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.course-card {
+    background: white;
+    padding: 25px;
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.course-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* FORMS */
+.form-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.course-form {
+    background: white;
+    padding: 25px;
+    width: 280px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.course-form input,
+.course-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.course-form button {
+    width: 100%;
+    padding: 12px;
+    background: #35C1A8;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
