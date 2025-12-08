@@ -93,7 +93,7 @@ body {
     /* Calculate the total width of one set of books for the animation */
     /* (6 books * 150px width) + (5 gaps * 20px gap) = 900px + 100px = 1000px */
     width: 200%; /* Setting a high width to hold the duplicated content */
-    animation: scroll-left 30s linear infinite; /* Animation applied here */
+    animation: scroll-left 50s linear infinite; /* Animation applied here */
     will-change: transform; /* Performance optimization */
 }
 
@@ -208,3 +208,4 @@ background-size: cover;
     background-size: cover;
     background-position: center;
 }
+/* footer */

@@ -1,24 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library Space</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <header class="header">
-        <div class="logo">
-           <div class="logopic"></div>
-            <span>LIBRARY SPACE</span>
-        </div>
-        <nav class="nav-bar">
-            <a href="#index.php" class="nav-item active">ACCUEIL</a>
-            <a href="affichage.php" class="nav-item">COURS</a>
-            <a href="geree.php" class="nav-item conditions">CONDITIONS</a>
-        </nav>
-    </header>
+<?php
+include ("header.php");
+?>
 
     <main class="container">
         <section class="top-books-section">
@@ -105,7 +87,9 @@
         </section>
 
     </main>
-
+    <?php 
+    include("footer.php");
+    ?>
     <script src="script.js"></script>
 </body>
 </html>

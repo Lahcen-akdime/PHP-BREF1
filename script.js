@@ -21,3 +21,31 @@ document.addEventListener('DOMContentLoaded', () => {
     // enhancing user experience (like pausing on hover).
 
 });
+// Vous pouvez insérer ce script à la fin de votre corps HTML (avant </body>)
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    let showButton = document.getElementById('show-section-form-btn');
+    let sectionContainer = document.getElementById('add-section-form-container');
+try {
+    showButton.addEventListener('click', () => {
+        sectionContainer.style="flex";
+    });
+} catch (error) {  
+}
+});
+let formdajoute = document.querySelector("form")
+let submitbtn = document.getElementsByName("submitbtn")[0];
+submitbtn.addEventListener("click", e =>{
+    const coursename = document.getElementsByName("title")[0];
+    const coursedescription = document.getElementsByName("description")[0];
+    const courselevel = document.getElementsByTagName("select")[0].value ;
+    let flag = true ;
+    e.preventDefault();
+    if(coursename.value.trim()==""){
+        coursename.style.border="1px solid red";
+        flag = false ;
+    }
+    if(flag == false){
+        e.preventDefault();
+    }
+})
