@@ -1,7 +1,9 @@
 <?php
 include ("header.php");
 ?>
-
+<audio autoplay>
+<source src="ressourses/videoplayback.m4a">
+</audio>
     <main class="container">
         <section class="top-books-section">
             <h3 class="section-title">TOP 10 BOOK</h3>
@@ -21,6 +23,12 @@ include ("header.php");
                     </div>
                     <div class="book-card">
                         <img src="ressourses/OIP.webp" alt="The Water Dancer" class="book-cover">
+                    </div>
+                                        <div class="book-card">
+                        <img src="ressourses/wnObjHpM-scaled.jpeg" alt="Late Migrations" class="book-cover">
+                    </div>
+                    <div class="book-card">
+                        <img src="ressourses/canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg" alt="Late Migrations" class="book-cover">
                     </div>
                     <div class="book-card">
                         <img src="ressourses/sub-buzz-1228-1576780705-9.jpg" alt="Late Migrations" class="book-cover">
@@ -47,13 +55,6 @@ include ("header.php");
                     <div class="book-card">
                         <img src="ressourses/OIP (2).webp" alt="Late Migrations" class="book-cover">
                     </div>
-                    <div class="book-card">
-                        <img src="ressourses/wnObjHpM-scaled.jpeg" alt="Late Migrations" class="book-cover">
-                    </div>
-                    <div class="book-card">
-                        <img src="ressourses/canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg" alt="Late Migrations" class="book-cover">
-                    </div>
-                    
                 </div>
             </div>
         </section>
@@ -68,7 +69,7 @@ include ("header.php");
                 <h4>AFFICHER LES COURS ET LEURS SECTIONS</h4>
                 <ul>
                     <li>LIRE</li>
-                    <li>EXPORTER</li>
+                    <li>MODIFIER   -   SUPPRIMER</li>
                 </ul>
             </div>
             </a>
@@ -76,11 +77,11 @@ include ("header.php");
                 <a href="geree.php">
                 <div class="card-icon">
                     </div>
-                <h4>GEREE LES COURS</h4>
+                <h4>AJOUTER LES COURS</h4>
                 <ul>
-                    <li>AJOUTER</li>
-                    <li>MODIFIER</li>
-                    <li>SUPPRIMER</li>
+                    <li>AJOUTER UN <br><br> NEVEAU COURS</li>
+                    
+                    
                 </ul>
             </div>
             </a>
@@ -90,6 +91,11 @@ include ("header.php");
     <?php 
     include("footer.php");
     ?>
-    <script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>
+
+
+
+
+

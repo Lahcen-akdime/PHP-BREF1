@@ -171,11 +171,9 @@ box-shadow: 0 0 15px black;
 
 .course-card ul {
     list-style: none;
-    padding-top: 10px;
 }
 
 .course-card li {
-    padding: 5px 0;
     color: #666;
 }
 /* Styling the placeholder icons to match the screenshot */
@@ -209,3 +207,29 @@ background-size: cover;
     background-position: center;
 }
 /* footer */
+.container-icons{
+    display: flex ;
+    justify-content: space-between ;
+}
+.deleteicon{
+height: 3rem;
+width: 3rem;
+border-radius: 50%;
+background-image: url(ressourses/delete.jpg);
+background-size: cover;
+transition: all 1s;
+}
+.editicon{
+height: 3rem;
+width: 3rem;
+border-radius: 50%;
+background-image: url(ressourses/edit.jpg);
+background-size: cover;
+transition: scale 0.5s ALL;
+}
+.editicon:hover{
+border: 2px solid black;
+}
+.deleteicon:hover{
+border: 2px solid black;
+}

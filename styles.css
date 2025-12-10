@@ -14,6 +14,7 @@ body {
     margin: 0;
       background-color: var(--color-primary);
     color: var(--color-text-dark);
+position: relative ;
 }
 
 /* HEADER */
@@ -107,7 +108,7 @@ body {
 }
 
 .course-card ul {
-    padding-left: 15px;
+
     margin: 0;
 }
 
@@ -128,7 +129,7 @@ body {
 .course-form {
     background: white;
     padding: 25px;
-    width: 280px;
+    width: 500px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
@@ -152,4 +153,16 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
-
+#imageplace{
+    height: 5rem;
+    width: 6rem;
+    border: 1px solid black;
+    
+}
+#permessionmodal{
+position: absolute ;
+height:4rem ;
+width: 8rem ;
+background-color: white ;
+border: 1px solid black;
+}

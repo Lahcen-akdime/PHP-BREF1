@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <header class="header">
         <div class="logo">
            <div class="logopic"></div>
@@ -17,6 +16,7 @@
         <nav class="nav-bar">
             <a href="index.php" class="nav-item active">ACCUEIL</a>
             <a href="affichage.php" class="nav-item">COURS</a>
-            <a href="geree.php" class="nav-item conditions">GEREE</a>
+            <a href="courses_create.php" class="nav-item conditions">CREATE A COURSE</a>
+            <a href="courses_create.php" class="nav-item active">SAVE A COURSE</a>
         </nav>
     </header>
