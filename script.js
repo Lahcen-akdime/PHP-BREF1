@@ -34,39 +34,44 @@ try {
 } catch (error) {  
 }
 });
+const formdajoute = document.getElementById("myform")
 try {
-    let formdajoute = document.getElementById("myform")
     formdajoute.addEventListener("submit", (e) =>{
+        e.preventDefault();
         let coursename = document.getElementsByName("title")[0];
         let coursedescription = document.getElementsByName("description")[0];
         let courselevel = document.getElementsByTagName("select")[0] ;
+        let isValid = true;
         if(coursename.value.trim()==""){
             coursename.style.border="1px solid red"
-            e.preventDefault();
             alert("Le titre est obligatoire");
+            isValid = false;
         }
          if(coursedescription.value.trim()==""){
              coursedescription.style.border="1px solid red"
-            e.preventDefault();
             alert("La description est obligatoire");
+            isValid = false;
         }
-        if(courselevel.value == ""){
+        if(courselevel.value.trim() == ""){
             console.log(courselevel.value);
-            e.preventDefault();
             courselevel.style.border="1px solid red" ;
             alert("level introuvable") ;
+            isValid = false;
         }
-        // if(courselevel.value != "Debutant" || courselevel.value != "Intermediaire"){
-        //     console.log(courselevel.value);
-        //     e.preventDefault();
-        //     courselevel.style.border="1px solid red" ;
-        //     alert("level introuvable") ;
-        // }
+        if(courselevel.value != "Débutant" && courselevel.value != "Intermédiaire" && courselevel.value != "Avancé"){
+            console.log(courselevel.value);
+            courselevel.style.border="1px solid red" ;
+            alert("level introuvable") ;
+            isValid = false;
+        }
+        
+        if(isValid){
+            formdajoute.submit();
+        }
     })
 } catch (error) {
     
 }
 function permession(){
-
-
+document.getElementById("permessionmodal").style.display="flex";
 }

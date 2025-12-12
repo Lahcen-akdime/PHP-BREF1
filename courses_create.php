@@ -1,24 +1,27 @@
 <?php
 include ("header.php");
-if(isset($_POST['submit'])){
+if($_SERVER["REQUEST_METHOD"]=="POST"){
     $title = $_POST['title'] ;
+    $image = $_POST['cours-image'] ;
     $description = $_POST['description'];
     $level = $_POST['level'] ;
     if(empty($title) || empty($description) || empty($level)){
-        echo "<script> alert('tout les champs sont obligatoire'); e.preventDefault();</script>";
-        echo "tout les champs sont obligatoire <br />" ;
+        echo "<script> alert('tout les champs sont obligatoire');</script>";
     }
     else{ 
-    echo htmlspecialchars($_POST['title']) ;
-    echo htmlspecialchars($_POST['description']) ;
-    echo htmlspecialchars($_POST['level']) ;
+        try {
+        require_once "config.php";
+        $insertion =  "INSERT INTO courses(title,image,description,course_level)
+        VALUES('$title','$image','$description','$level');";
+        $connection -> query($insertion);
+        header("location: ./affichage.php");
+        } catch (PDOException $e) {
+            die("Query failed : ".$e->getMessage());
+        }
+        
     }
 }
-if(!empty($_POST['title'])){
-    echo htmlspecialchars($_POST['title']) ;
-    echo htmlspecialchars($_POST['description']) ;
-    echo htmlspecialchars($_POST['level']) ;
-    }
+
 ?>
     <section class="content">
         <h2 class="page-title">CREATE COURSE</h2>
@@ -38,14 +41,14 @@ if(!empty($_POST['title'])){
                 <br><br>
                 <select id="level-select" name="level" >
                     <option value="" disabled selected>Choisir le niveau du cours</option>
-                    <option value="Debutant">Debutant</option>
-                    <option value="Intermidiare">Intermediaire</option>
-                    <option value="Avance">Avance</option>
+                    <option value="Débutant">Débutant</option>
+                    <option value="Intermédiaire">Intermédiaire</option>
+                    <option value="Avancé">Avancé</option>
                 </select>
                 <br><br>
                 
                 <button type="submit">Ajouter le cours</button><br><br>
-                <button type="button" name="submit" id="show-section-form-btn" class="action-button">
+                <button type="button" name="btnSubmit" id="show-section-form-btn" class="action-button">
                     Ajouter une section
                 </button>
                 <!-- <br><br><hr><br>

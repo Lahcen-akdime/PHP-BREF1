@@ -1,8 +1,8 @@
 <?php
 include "config.php";
 include ("header.php");
-$mysqli = "SELECT * FROM courses";
 $mydata = mysqli_query($connection, $mysqli);
+
 ?>
     <!-- CONTENT -->
     <section class="content">
@@ -15,24 +15,27 @@ $mydata = mysqli_query($connection, $mysqli);
                 <div class="course-card">
                     <h3><?php echo $element['title']; ?></h3>
                     <ul>
-                        <li><div class="imageplace" style="background-image: url(<?php echo $element['image'];?>);background-size:cover;height:8rem;border-radius:10px;"></div></li>
+                        <li><div class="imageplace" style="background-image: url(<?php echo $element['image'];?>);background-size:cover;height:8.7rem;border-radius:10px;"></div></li>
                         <li><?php echo $element['description']; ?></li>
                         <li><?php echo $element['course_level']; ?></li>
                         <li><?php echo $element['created_at']; ?></li>
                     </ul>
                     <div class="container-icons">
-                    <div class="deleteicon" onclick="permession()"></div>
-                    <div class="editicon"></div>
+                    <div class="deleteicon" href="./delete.php?id=<?php $element['id']?>"></div>
+                    <div class="editicon"  href="./edit.php?id=<?php $element['id']?>"></div>
                     </div>
                 </div>
             <?php }; ?>
-
         </div>
     </section>
+    <div id='permessionmodal' style="display:none"><h2>Are you sure ?</h2>
+<div><button class="nav-item active" style="background-color:green;">yes</button>
+<button class="nav-item conditions">no</button>
+</div>
+</div>
 <?php
 include ("footer.php");
 ?>
-<div id="permessionmodal"></div>
 <script src="script.js" defer></script>
 </body>
 

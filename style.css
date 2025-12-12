@@ -220,8 +220,8 @@ background-size: cover;
 transition: all 1s;
 }
 .editicon{
-height: 3rem;
-width: 3rem;
+height: 2.9rem;
+width: 2.9rem;
 border-radius: 50%;
 background-image: url(ressourses/edit.jpg);
 background-size: cover;

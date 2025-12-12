@@ -5,4 +5,5 @@ $db_pass = "" ;
 $db_name = "course_sections" ;
 $connection = mysqli_connect($db_server,$db_user,
                             $db_pass,$db_name);
+$mysqli = "SELECT * FROM courses";
 ?>
