@@ -8,6 +8,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     if(empty($title) || empty($description) || empty($level)){
         echo "<script> alert('tout les champs sont obligatoire');</script>";
     }
+    elseif ($level != "Débutant" && $level != "Intermédiaire" && $level != "Avancé") {
+        echo "<script> alert('Level introuvable');</script>";
+    }
     else{ 
         try {
         require_once "config.php";
@@ -18,7 +21,6 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         } catch (PDOException $e) {
             die("Query failed : ".$e->getMessage());
         }
-        
     }
 }
 

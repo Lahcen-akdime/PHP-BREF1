@@ -66,7 +66,7 @@ include ("header.php");
             <div class="course-card">
                 <div class="card-icon">
                     </div>
-                <h4>AFFICHER LES COURS ET LEURS SECTIONS</h4>
+                <h4>AFFICHER LES CHAPITRES ET LEURS SECTIONS</h4>
                 <ul>
                     <li>LIRE</li>
                     <li>MODIFIER   -   SUPPRIMER</li>
@@ -74,14 +74,12 @@ include ("header.php");
             </div>
             </a>
             <div class="course-card">
-                <a href="geree.php">
+                <a href="courses_create.php">
                 <div class="card-icon">
                     </div>
                 <h4>AJOUTER LES COURS</h4>
                 <ul>
-                    <li>AJOUTER UN <br><br> NEVEAU COURS</li>
-                    
-                    
+                    <li>AJOUTER UN NUVEAU <br><br> COURS  -  EXPORTER<br><br></li>
                 </ul>
             </div>
             </a>

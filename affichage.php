@@ -21,8 +21,8 @@ $mydata = mysqli_query($connection, $mysqli);
                         <li><?php echo $element['created_at']; ?></li>
                     </ul>
                     <div class="container-icons">
-                    <div class="deleteicon" href="./delete.php?id=<?php $element['id']?>"></div>
-                    <div class="editicon"  href="./edit.php?id=<?php $element['id']?>"></div>
+                    <a class="deleteicon" href="./delete.php?id=<?php echo $element['id']?>"></a>
+                    <a class="editicon"  href="./edit.php?id=<?php echo $element['id']?>"></a>
                     </div>
                 </div>
             <?php }; ?>
