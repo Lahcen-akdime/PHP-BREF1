@@ -2,7 +2,6 @@
 include "config.php";
 include ("header.php");
 $mydata = mysqli_query($connection, $mysqli);
-
 ?>
     <!-- CONTENT -->
     <section class="content">
@@ -22,7 +21,7 @@ $mydata = mysqli_query($connection, $mysqli);
                     </ul>
                     <div class="container-icons">
                     <a class="deleteicon" href="./courses_delete.php?id=<?php echo $element['id']?>"></a>
-                    <a class="nav-item conditions" id="displaySections" href="./sections_list.php?id =<?php echo $element['id']?>">Course sections</a>
+                    <a class="nav-item conditions" id="displaySections" href="./sections_list.php?id=<?php echo $element['id']?>">Course sections</a>
                     <a class="editicon"  href="./courses_edit.php?id=<?php echo $element['id']?>"></a>
                     </div>
                 </div>

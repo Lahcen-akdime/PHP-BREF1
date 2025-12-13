@@ -20,6 +20,7 @@
     border-top: 3px solid rgba(0,0,0,0.1);
     margin-top: 40px;
     border-radius: 0 0 15px 15px; 
+    
 }
 
 .footer-content h3 {

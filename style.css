@@ -19,6 +19,9 @@
 body {
     background-color: var(--color-text-light);
     color: var(--color-text-dark);
+    display: flex;
+flex-direction: column;
+justify-content: space-between;
 }
 
 .header {
