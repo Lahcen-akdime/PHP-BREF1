@@ -55,7 +55,17 @@ position: relative ;
     text-decoration: none;
     font-size: 17px;
 }
-
+#displaySections{
+ align-self: center;
+font-size:0.7rem;
+height:max-content ;
+width: 5.5rem;
+transition: all 0.5s;
+}
+#displaySections:hover{
+    box-shadow: 0 0 5px black;
+    border: 1px solid white;
+}
 /* SAME COLORS AS YOUR UI */
 .green  { background: #35C1A8; }
 .red    { background: #E1655E; }
