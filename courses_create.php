@@ -55,30 +55,6 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         </div>
     </div>
     </section>
-        
-        <!-- <button type="button" name="btnSubmit" id="show-section-form-btn" class="action-button">
-            Ajouter une section
-        </button> -->
-        <!-- <br><br><hr><br>
-        <div id="add-section-form-container" style="display: none ;">
-            <form class="section-form">
-                <h4>Nouvelle Section</h4>
-                <input type="text" placeholder="Titre de la section (title)" name="section_title" required>
-    <textarea placeholder="Contenu de la section (content)" name="section_content" required></textarea>
-    <input type="number" placeholder="Position (position)" name="position" required min="1">
-    <hr><br> -->
-<!-- <form class="course-form">
-    <h3>Modifier un cours</h3>
-    <input type="text" placeholder="Cours à modifier">
-    <input type="text" placeholder="Nouveau nom">
-    <button>Modifier</button>
-</form>
-
-<form class="course-form">
-    <h3>Supprimer un cours</h3>
-    <input type="text" placeholder="Cours à supprimer">
-    <button>Supprimer</button>
-</form> -->
 
 <?php
 include ("footer.php");

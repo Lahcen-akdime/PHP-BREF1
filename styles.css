@@ -207,7 +207,7 @@ justify-content: space-evenly;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .section-card:hover {
@@ -253,6 +253,7 @@ justify-content: space-evenly;
     font-weight: 500;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-left: 2.5rem;
 }
 
 .add-section-btn:hover {
@@ -263,4 +264,61 @@ justify-content: space-evenly;
 .add-section-btn:active {
     transform: translateY(0);
 }
+/* section form */
+.add-section-form {
+    width: 450px;
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    align-self: center
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #111827;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #947b35;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #E8C255;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #947b35;
+}
+
+
 
