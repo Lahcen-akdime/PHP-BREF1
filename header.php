@@ -15,7 +15,7 @@
         </div>
         <nav class="nav-bar">
             <a href="index.php" class="nav-item active">ACCUEIL</a>
-            <a href="affichage.php" class="nav-item">COURS</a>
+            <a href="courses_list.php" class="nav-item">COURS</a>
             <a href="courses_create.php" class="nav-item conditions">CREATE A COURSE</a>
             <a href="courses_create.php" class="nav-item active">SAVE A COURSE</a>
         </nav>

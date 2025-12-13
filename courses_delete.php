@@ -4,7 +4,7 @@ if($id){
     require_once "config.php";
     $operation = "DELETE FROM courses WHERE id = $id";
     $connection -> query($operation);
-    header("location: ./affichage.php");
+    header("location: ./courses_list.php");
 }
 else{
     echo "<script>alert('failed')</script>";

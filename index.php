@@ -62,7 +62,7 @@ include ("header.php");
         <h3 class="section-title my-book-title">MY BOOK</h3>
         
         <section class="my-book-section">
-            <a href="affichage.php">
+            <a href="courses_list.php">
             <div class="course-card">
                 <div class="card-icon">
                     </div>

@@ -17,7 +17,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         $insertion =  "INSERT INTO courses(title,image,description,course_level)
         VALUES('$title','$image','$description','$level');";
         $connection -> query($insertion);
-        header("location: ./affichage.php");
+        header("location: ./courses_list.php");
         } catch (PDOException $e) {
             die("Query failed : ".$e->getMessage());
         }
@@ -50,21 +50,23 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
                 <br><br>
                 
                 <button type="submit">Ajouter le cours</button><br><br>
-                <button type="button" name="btnSubmit" id="show-section-form-btn" class="action-button">
-                    Ajouter une section
-                </button>
-                <!-- <br><br><hr><br>
-                <div id="add-section-form-container" style="display: none ;">
-                    <form class="section-form">
-                        <h4>Nouvelle Section</h4>
-                        <input type="text" placeholder="Titre de la section (title)" name="section_title" required>
-            <textarea placeholder="Contenu de la section (content)" name="section_content" required></textarea>
-            <input type="number" placeholder="Position (position)" name="position" required min="1">
-            <hr><br> -->
-        </form>
-
-</div>
-
+            </form>
+            
+        </div>
+    </div>
+    </section>
+        
+        <!-- <button type="button" name="btnSubmit" id="show-section-form-btn" class="action-button">
+            Ajouter une section
+        </button> -->
+        <!-- <br><br><hr><br>
+        <div id="add-section-form-container" style="display: none ;">
+            <form class="section-form">
+                <h4>Nouvelle Section</h4>
+                <input type="text" placeholder="Titre de la section (title)" name="section_title" required>
+    <textarea placeholder="Contenu de la section (content)" name="section_content" required></textarea>
+    <input type="number" placeholder="Position (position)" name="position" required min="1">
+    <hr><br> -->
 <!-- <form class="course-form">
     <h3>Modifier un cours</h3>
     <input type="text" placeholder="Cours à modifier">
@@ -78,8 +80,6 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     <button>Supprimer</button>
 </form> -->
 
-</div>
-</section>
 <?php
 include ("footer.php");
 ?>
