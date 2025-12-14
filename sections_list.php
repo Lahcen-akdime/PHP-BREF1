@@ -4,6 +4,9 @@ include_once "config.php";
 $courseid ;
 if($_SERVER["REQUEST_METHOD"]=="GET"){
     $courseid = $_GET['id'];
+    $operation = "SELECT * FROM courses WHERE id = $courseid LIMIT 1" ;
+    $courstitle = $connection -> query($operation) ;
+
 try {
     $CourseSections = "SELECT * FROM sections WHERE course_id = $courseid ORDER BY position ASC" ;
     $sections = $connection -> query($CourseSections) ;
@@ -12,6 +15,10 @@ try {
 }
 }
 ?>
+    <?php 
+     foreach($courstitle as $element){
+        echo "<h1 style='margin-left: 2.5rem;'>SECTIONS OF $element[title] : </h1>" ;
+        } ?>
 <section class="content">
     <div class="sections-container">
         <?php
@@ -31,9 +38,8 @@ foreach($sections as $element){
 }
 ?>
         </div>
-        <br><br>
     </section>
-    <br><br>
+    <br>
     <a href="sections_create.php?id=<?php echo "$courseid" ?>"><button class="add-section-btn">
     + Ajouter une section
 </button></a>

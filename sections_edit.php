@@ -33,7 +33,6 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         }
     }
 }
-
 ?>
  <section class="content">
         <h2 class="page-title">EDIT THE SECTION</h2>
