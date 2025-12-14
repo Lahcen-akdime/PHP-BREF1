@@ -13,7 +13,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         $insertion = "INSERT INTO sections (title,content,position,course_id)
         VALUES('$sectionTitle','$sectionContent','$sectionPosition','$id')";
         $connection -> query($insertion);
-        header("location: ./");
+        header("location: ./courses_list.php");
     }
 }
 ?>

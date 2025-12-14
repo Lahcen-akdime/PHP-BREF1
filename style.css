@@ -236,3 +236,6 @@ border: 2px solid black;
 .deleteicon:hover{
 border: 2px solid black;
 }
+#centrer{
+    margin-left: 9.5rem;
+}
