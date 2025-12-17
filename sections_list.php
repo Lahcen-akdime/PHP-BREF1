@@ -10,7 +10,7 @@ if($_SERVER["REQUEST_METHOD"]=="GET"){
 try {
     $CourseSections = "SELECT * FROM sections WHERE course_id = $courseid ORDER BY position ASC" ;
     $sections = $connection -> query($CourseSections) ;
-} catch (\Throwable $th) {
+} catch (PDOException $e) {
 
 }
 }

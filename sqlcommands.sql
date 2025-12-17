@@ -97,3 +97,11 @@ VALUES
 ('Déploiement et Monitoring',
  'Surveillance des applications et bonnes pratiques de production.',
  4, 4);
+ 
+ ________________________ PARTIE 2 ________________________________
+ CREATE TABLE CLIENT(
+    id int PRIMARY KEY AUTO_INCREMENT ,
+    name varchar(50) ,
+    email varchar(100) UNIQUE,
+    password varchar(100)
+    ) 

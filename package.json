@@ -1,0 +1,24 @@
+{
+  "name": "php-bref",
+  "version": "1.0.0",
+  "description": "tailwind-css",
+  "homepage": "https://github.com/Lahcen-akdime/PHP-BREF1#readme",
+  "bugs": {
+    "url": "https://github.com/Lahcen-akdime/PHP-BREF1/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lahcen-akdime/PHP-BREF1.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "tailwindcss": "^4.1.18"
+  }
+}

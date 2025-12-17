@@ -1,3 +1,15 @@
+/* tailwind css space */
+@import "tailwindcss";
+
+
+
+
+
+
+
+
+
+
 /* GLOBAL */
 :root {
     --color-primary: #f8c962; /* Yellow/Orange background */
@@ -318,6 +330,5 @@ justify-content: space-evenly;
 .submit-btn:hover {
     background-color: #947b35;
 }
-
 
 
