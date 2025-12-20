@@ -1,3 +1,10 @@
+<?php
+session_start() ;
+if(!$_SESSION['id']){
+header('location: register_login/login.php');
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +24,11 @@
             <a href="index.php" class="nav-item active">ACCUEIL</a>
             <a href="courses_list.php" class="nav-item">COURS</a>
             <a href="courses_create.php" class="nav-item conditions">CREATE A COURSE</a>
+            <a href="favourite.php" class="nav-item">FAVOURITE</a>
+            <a href="dashboard.php" class="nav-item">DASHBOARD</a>
+            <a href="register_login/logout.php" class="nav-item active">LOGOUT</a>
+
             <!-- <a href="courses_create.php" class="nav-item active">SAVE A COURSE</a> -->
         </nav>
     </header>
+

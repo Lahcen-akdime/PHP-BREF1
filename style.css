@@ -62,7 +62,29 @@ justify-content: space-between;
 .nav-item:nth-child(2) {
     background-color: var(--color-red);
 }
-
+.nav-item:nth-child(4) {
+    background-color: rgb(238, 107, 129);
+}
+.nav-item:nth-child(4) {
+     background: linear-gradient(135deg, #FFD93D, #FF6B6B, #6BCF9B, #F78ACB);
+    color: #ffffff;
+    border: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.nav-item:nth-child(5){
+background: linear-gradient(135deg, #FFD93D, #FF6B6B, #6BCF9B, #F78ACB);
+    color: #ffffff;
+    border: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
 .nav-item.conditions {
     background-color: var(--color-gold);
 }

@@ -1,5 +1,6 @@
 <?php
 include ("header.php");
+$id = $_SESSION['id'] ;
 ?>
 <audio autoplay>
 <source src="ressourses/videoplayback.m4a">
@@ -68,18 +69,18 @@ include ("header.php");
                     </div>
                 <h4>AFFICHER LES CHAPITRES ET LEURS SECTIONS</h4>
                 <ul>
-                    <li>LIRE</li>
+                    <li>LIRE - AJOUTER LES CHAPITRES</li>
                     <li>MODIFIER   -   SUPPRIMER</li>
                 </ul>
             </div>
             </a>
             <div class="course-card">
-                <a href="courses_create.php">
+                <a href="playlist.php">
                 <div class="card-icon">
                     </div>
-                <h4>AJOUTER LES COURS</h4>
+                <h4>MON PLAYLIST</h4>
                 <ul>
-                    <li>AJOUTER UN NUVEAU <br><br> COURS  -  EXPORTER<br><br></li>
+                    <li>L'AFFICHAGE DE PLAYLIST <br><br> LES CHAPITRES PREFERE <br><br></li>
                 </ul>
             </div>
             </a>

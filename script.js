@@ -70,8 +70,19 @@ try {
         }
     })
 } catch (error) {
-    
+
 }
 function permession(){
 document.getElementById("permessionmodal").style.display="flex";
+}
+function favourite_btn(name){
+let btnname = document.getElementsByName(name)[0];
+btnname.classList.toggle("favourite");
+btnname.classList.toggle("selected-favorite");
+ if (btnname.classList=="selected-favorite"){
+    alert("kayn"); 
+    
+ }else{
+    alert("walo");
+ }
 }

@@ -1,3 +1,5 @@
+ _______________________ PARTIE 1 CRUD _____________________________
+
 CREATE DATABASE course_sections ;
 _________________________________________
 CREATE TABLE COURSES (
@@ -98,10 +100,18 @@ VALUES
  'Surveillance des applications et bonnes pratiques de production.',
  4, 4);
  
- ________________________ PARTIE 2 ________________________________
+ _______________________ PARTIE 2 Login / logout ___________________________
+
  CREATE TABLE CLIENT(
     id int PRIMARY KEY AUTO_INCREMENT ,
     name varchar(50) ,
     email varchar(100) UNIQUE,
     password varchar(100)
     ) 
+    CREATE TABLE ENROLLMENTS (
+    id int PRIMARY KEY AUTO_INCREMENT ,
+    client_id int ,
+    selectedcourse_id int ,
+    FOREIGN KEY (client_id) REFERENCES client(id) ,
+    FOREIGN KEY (selectedcourse_id) REFERENCES courses(id)
+    )
