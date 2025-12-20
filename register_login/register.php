@@ -44,7 +44,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
   <h2>Create Account</h2>
 
   <label>Full Name</label>
-  <input type="text" name="name" placeholder="Enter your name">
+  <input type="text" name="name" placeholder="Enter your name" required>
 
   <label>Email</label>
   <input type="email" name="email" placeholder="Enter your email">

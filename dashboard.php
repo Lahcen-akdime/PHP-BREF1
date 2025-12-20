@@ -10,7 +10,7 @@ $operation2 = "SELECT COUNT(id) FROM client ; " ;
 $totale2 = $connection -> query($operation2) ;
 $result2 = $totale2 -> fetch_row() ;
 // Total des Course favoré //
-$operation3 = "SELECT COUNT(DISTINCT selectedcourse_id) FROM enrollments ; " ;
+$operation3 = "SELECT COUNT(selectedcourse_id) FROM enrollments " ;
 $totale3 = $connection -> query($operation3) ;
 $result3 = $totale3 -> fetch_row() ;
 // populaire Course //
@@ -44,9 +44,21 @@ FROM courses LEFT JOIN enrollments
 ON courses.id = enrollments.selectedcourse_id" ;
 $totale11 = $connection -> query($operation11) ;
 $result5 = $totale11 -> fetch_row() ;
+// cour sans inscription //
+$operation13 = "SELECT DISTINCT courses.title , courses.created_at
+FROM client , enrollments INNER JOIN courses
+ON NOT EXISTS(SELECT enrollments.selectedcourse_id FROM enrollments WHERE courses.id = enrollments.selectedcourse_id) ;" ;
+$totale13 = $connection -> query($operation13) ;
+// Les dernier inscription //
+$operation12 = "SELECT DISTINCT client.name , courses.title , enrollments.dateinscreption
+FROM courses , client INNER JOIN enrollments
+WHERE courses.id = enrollments.selectedcourse_id LIMIT 2 ;" ;
+$totale12 = $connection -> query($operation12) ;
+$result12 = $totale12 -> fetch_row() ;
+
+
 ?>
-
-
+<!-- ____________________________________ HTML _____________________________________________ -->
 
 <h1 style='text-align : center;color:white'>___________ STATISTICS  PLACE ___________</h1>
 <!-- ===== STATS ===== -->
@@ -64,7 +76,7 @@ $result5 = $totale11 -> fetch_row() ;
 
     <div class="card red">
         <h2><?php echo $result3[0] ;?></h2>
-        <p>Total des Course favoré</p>
+        <p>Total des Courses favoré</p>
     </div>
 
     <div class="card">
@@ -119,10 +131,13 @@ foreach($totale10 as $element){
     <th>Cours</th>
     <th>Date création</th>
 </tr>
-<tr><td>Python Débutant</td><td>2024-11-01</td></tr>
+<?php 
+foreach($totale13 as $element){
+    echo "<tr><td>$element[title]</td><td>$element[created_at]</td></tr>";
+}
+?>
 </table>
 </div>
-
 <!-- ===== TABLE 4 ===== -->
 <div class="section">
 <h3>🕒 Dernières inscriptions</h3>
@@ -132,8 +147,12 @@ foreach($totale10 as $element){
     <th>Cours</th>
     <th>Date</th>
 </tr>
-<tr><td>Yassine</td><td>PHP Avancé</td><td>2025-12-15</td></tr>
-<tr><td>Imane</td><td>JavaScript</td><td>2025-12-14</td></tr>
+<?php 
+foreach($totale12 as $element){
+    echo "<tr><td>$element[name]</td><td>$element[title]</td><td>$element[dateinscreption]</td></tr>";
+}
+?>
+
 </table>
 </div>
 </main>
